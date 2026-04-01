@@ -1,0 +1,91 @@
+name: API Specification Issue 🛠️
+description: Report an issue related to the WordPress REST API OpenAPI specification.
+title: "[Bug]: <short description>"
+labels: ["bug", "api"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue! Please fill in the details below so we can investigate it.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Description
+      description: Describe the issue with the API specification.
+      placeholder: "Describe the problem with the OpenAPI spec..."
+    validations:
+      required: true
+
+  - type: input
+    id: spec_version
+    attributes:
+      label: 📌 Affected Specification Version
+      description: Which version of the API spec has this issue?
+      placeholder: "e.g., 1.0.0 (WordPress 6.9.4)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: ❓ Issue Type
+      description: What type of issue is this?
+      options:
+        - Incorrect Schema Definition
+        - Missing Endpoint or Parameter
+        - Inconsistency with WordPress REST API behavior or docs
+        - Typo or Formatting Issue
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: ✅ Expected Behavior
+      description: What should the correct API specification be?
+      placeholder: "Describe what the correct OpenAPI spec should look like."
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: ❌ Current Behavior
+      description: What is wrong with the current API spec?
+      placeholder: "Describe the incorrect OpenAPI definition..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: Provide steps to replicate the issue.
+      placeholder: |
+        1. Open `wordpress-rest-api-openapi-specification.yaml`
+        2. Look at the definition of `/posts/{id}`
+        3. Notice that …
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggested_fix
+    attributes:
+      label: 🛠️ Suggested Fix (if any)
+      description: If you have an idea for a fix, describe it here.
+      placeholder: "Example: Add or correct a field in the schema for the affected endpoint."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: ℹ️ Additional Info
+      description: Any other details or context?
+      placeholder: "Additional logs, screenshots, or context."
+    validations:
+      required: false

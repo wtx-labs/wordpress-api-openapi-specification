@@ -1,0 +1,80 @@
+name: Feature Request ✨
+description: Suggest a new feature or improvement for the WordPress REST API OpenAPI specification.
+title: "[Feature]: <short description>"
+labels: ["enhancement", "api"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your feature request! Please provide as much detail as possible to help us evaluate and implement your idea.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 📝 Summary
+      description: Provide a clear and concise description of the feature or improvement.
+      placeholder: "Example: Document a missing query parameter on a collection endpoint."
+    validations:
+      required: true
+
+  - type: input
+    id: spec_version
+    attributes:
+      label: 📌 Target Specification Version
+      description: Which version of the API spec should include this change?
+      placeholder: "e.g., 1.0.0 (WordPress 6.9.4)"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: feature_type
+    attributes:
+      label: 🏗️ Feature Type
+      description: What kind of improvement are you suggesting?
+      options:
+        - New Endpoint
+        - New Parameter
+        - Schema Update
+        - Improved Documentation
+        - Standard Compliance
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: 🔍 Use Case
+      description: Describe how this feature would be used and why it is important.
+      placeholder: "Example: Client generators need accurate schemas for embedded or context-specific fields."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: 💡 Proposed Solution
+      description: Describe how this feature should be implemented in the OpenAPI spec.
+      placeholder: "Example: Extend the `/posts` operation parameters or response schema as follows…"
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternatives Considered
+      description: Are there alternative ways to achieve this functionality?
+      placeholder: "Example: Describe another way to model the same behavior in OpenAPI."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: ℹ️ Additional Information
+      description: Any other details or context?
+      placeholder: "Example: Links to WordPress REST API handbook, `register_rest_route` code, or sample JSON responses."
+    validations:
+      required: false
